@@ -1,0 +1,48 @@
+.yin-yang-img-container {
+    position: relative;
+}
+
+.yin-yang-img-container > img.yin-yang-inverted {
+    filter: invert(90%);
+}
+
+.yin-yang-img-container > img.yin-yang-anim-to-inverted {
+    animation: yin-yang-to-inverted 1s;
+}
+
+.yin-yang-img-container > img.yin-yang-anim-to-original {
+    animation: yin-yang-to-original 1s;
+}
+
+@keyframes yin-yang-to-inverted {
+    0%   { filter: initial;     }
+    100% { filter: invert(90%); }
+}
+
+@keyframes yin-yang-to-original {
+    0%   { filter: invert(90%); }
+    100% { filter: initial;     }
+}
+
+.yin-yang-toggle-button {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-family: Arial;
+    font-size: 24px;
+    color: black;
+    background: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.yin-yang-toggle-button.yin-yang-anim-rotate {
+    animation: yin-yang-rotate 1s;
+}
+
+@keyframes yin-yang-rotate {
+    0%   { transform: rotate(0deg);   }
+    100% { transform: rotate(360deg); }
+}
